@@ -1,0 +1,27 @@
+header .nav-item{
+height: 100px
+}
+.nav-item-1, .nav-item-1 .dropdown-menu{
+    background-color: rgb(255, 197, 38);
+}
+.nav-item-2, .nav-item-2 .dropdown-menu{
+    background-color: skyblue;
+}
+.nav-item-3, .nav-item-3 .dropdown-menu{
+    background-color: purple;
+}
+.nav-item-4, .nav-item-4 .dropdown-menu{
+    background-color: lightgreen;
+}   
+
+
+button.dropdown-toggle::after{
+content: none;
+}
+.dropdown-menu{
+width: 100%;
+
+}
+.dropdown-item{
+color: white;
+}

@@ -1,0 +1,31 @@
+body{
+  font-family : sans-serif;
+}
+
+.carousel-item{
+  height: 32rem;
+  color: white;
+  position: relative;
+  background: black; /*#444;*/
+}
+.carousel-img{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
+.fontIcon{
+  height: 25%;
+  width: 25%;
+}
+#carousel-img1{
+  background-image: url(images/offer3.jpg);
+}
+#carousel-img2{
+  background-image: url(images/offer2.jpg);
+}
+#carousel-img3{
+  background-image: url(images/offer3.jpg);
+}

@@ -1,0 +1,15 @@
+.card {
+    height:475px;
+}
+.card-body{
+    position: relative;
+}
+
+.card-body a {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    margin-left: -16.5px;
+}
+

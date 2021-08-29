@@ -56,6 +56,7 @@ $(function() {
         a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("h5")[0].innerHTML = title;
         a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("p")[0].innerHTML = description;
         a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("p")[1].innerHTML = price;
+        a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("span")[0].innerHTML = key;
         pageimg = a.getElementsByTagName("div")[0].getElementsByTagName("img")[0]
         pageimg.src = img;
         pageimg.style.width = "18rem";

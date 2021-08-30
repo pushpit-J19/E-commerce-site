@@ -139,15 +139,15 @@
                 </div>
             </template>
             <template id="newitem">
-                <div class="item col col-md-3">
+                <div class="item col col-md-3" onclick="detailPg(this)">
                     <div class="card" style="width: 18rem;">
                     <img src="" class="card-img-top" alt="">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <p class="card-text"></p>
-                        <a href="#" class="btn btn-success">Add to Cart</a>
-                        <span class="jsonname d-none"></span>
+                        <p class="card-text">Description</p>
+                        <p class="card-text">Price</p>
+                        <button type="button" class="btn btn-success" onclick="addToCart(this)">Add to Cart<span class="jsonname d-none"></span></button>
+                        
                     </div>
                     </div>
                 </div>

@@ -1,0 +1,33 @@
+.img{
+    width: 25rem;
+}
+
+main{
+    align-items: center;
+}
+
+.row {
+    border : 1px rgba(0,0,0,0.2) solid;
+    box-shadow: 10px 5px 5px rgba(0,0,0,0.2);
+    padding: 50px;
+    border-radius: 25px;
+    width: 80%;
+}
+
+.content{
+    position: relative;
+}
+.content #lower {
+    position: absolute;
+    bottom: 0;
+}
+
+#extraButtons {
+    width: 80%;
+    text-align: center;
+
+}
+#extraButtons button{
+    width: 25%;
+    font-size: large;
+}

@@ -3,16 +3,13 @@
 // https://stackoverflow.com/questions/7815374/get-element-inside-element-by-class-and-id-javascript
 
 
-console.log(document.getElementsByClassName("row"));
-console.log(document.getElementById("products"));
-
 if (document.getElementsByClassName("row").length === 0 ){
   item = document.getElementById("newrow").content.querySelector(".row");
   a = document.importNode(item, true);
   document.getElementById("products").appendChild(a);
 }
 
-console.log(document.getElementsByClassName("row"));
+
 
 /* // t = shirts.json;
 t=[]
@@ -24,7 +21,6 @@ for (var i=0; i<3; i++){
 }
  */
 
-console.log(document.getElementsByClassName("row")[0]);
 
 
 
@@ -41,8 +37,41 @@ console.log(document.getElementsByClassName("row")[0]);
   });
  */
 
+
+var CART = [];
+if (localStorage.getItem("cart")===""){
+  localStorage.setItem("cart", CART);
+}
+
+function addToCart(item){
+  var CART = localStorage.getItem("cart");
+  if (CART !== null){
+    CART = CART.split(" ");
+  }else{
+    CART = [];
+  }
+
+  CART.push( item.getElementsByTagName("span")[0].innerHTML );
+  console.log(CART);
+  localStorage.setItem("cart", CART.join(" "));
+}
+
+
+function detailPg(item){
+  key = item.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("button")[0].getElementsByTagName("span")[0].innerHTML;
+  window.location.href = "detail.html";
+  localStorage.setItem("currItem" , key);  
+};
+
+/* window.addEventListener('beforeunload', function (e) {
+  e.preventDefault();
+  localStorage.removeItem("cart");
+});
+ */
+
+if(window.location.href !== "detail.html"){
+
 $(function() {
-  var items = [];
 
   $.getJSON('shirts.json', function(data) {
       $.each(data, function(key, val) {
@@ -51,32 +80,35 @@ $(function() {
         const price = val.price ;
         const img = val.img ;
 
-        newitem = document.getElementById("newitem").content.querySelector("div");
-        a = document.importNode(newitem, true);
-        a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("h5")[0].innerHTML = title;
-        a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("p")[0].innerHTML = description;
-        a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("p")[1].innerHTML = price;
-        a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("span")[0].innerHTML = key;
-        pageimg = a.getElementsByTagName("div")[0].getElementsByTagName("img")[0]
-        pageimg.src = img;
-        pageimg.style.width = "18rem";
-        pageimg.style.height = "18rem";
+        newitem = document.getElementById("newitem");
+        if (newitem!==null){
+          newitem = newitem.content.querySelector("div");
+          a = document.importNode(newitem, true);
+          a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("h5")[0].innerHTML = title;
+          a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("p")[0].innerHTML = description;
+          a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("p")[1].innerHTML = price;
+          a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("button")[0].getElementsByTagName("span")[0].innerHTML = key;
+          pageimg = a.getElementsByTagName("div")[0].getElementsByTagName("img")[0]
+          pageimg.src = img;
+          pageimg.style.width = "18rem";
+          pageimg.style.height = "18rem";
 
-        var rows = document.getElementsByClassName("row");
-        var lastrow = rows[ rows.length - 1];
-        if (lastrow.getElementsByClassName("item").length == 4){
-          newrow = document.getElementById("newrow").content.querySelector(".row");
-          tmp = document.importNode(newrow, true);
-          document.getElementById("products").appendChild(tmp);
-          rows = document.getElementsByClassName("row");
-          lastrow = rows[ rows.length - 1];
+          var rows = document.getElementsByClassName("row");
+          var lastrow = rows[ rows.length - 1];
+          if (lastrow.getElementsByClassName("item").length == 4){
+            newrow = document.getElementById("newrow").content.querySelector(".row");
+            tmp = document.importNode(newrow, true);
+            document.getElementById("products").appendChild(tmp);
+            rows = document.getElementsByClassName("row");
+            lastrow = rows[ rows.length - 1];
+          }
+
+          lastrow.appendChild(a);     // change [0] to [-1]
         }
-
-        lastrow.appendChild(a);     // change [0] to [-1]
-
     });
 
   });
 
 });
-  
+
+}

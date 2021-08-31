@@ -16,6 +16,7 @@
     </head>
     <body>
         <header>
+            <!-- NAVBAR -->
             <nav class="navbar navbar-dark bg-dark pt-2 pb-0">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.html">
@@ -80,6 +81,7 @@
         </header>
 
         <main>
+            <!--Carousel-->
             <section>
                 <div id="FashionCarousel" class="mt-1 carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-indicators">
@@ -113,34 +115,16 @@
             </section>
 
             <section id="products" class="p-3 m-3">
-            <!--
-                <div class="row">
-                    <div class="col col-md-3">
-                        <div class="card" style="width: 18rem;">
-                        <img src="images/product-1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-
-                </div>
-                <div class="row">
-                </div>
-                <div class="row">
-                </div>
-                
-                -->
+                <!--Items-->
             </section>
 
+            <!-- Template for adding a new row -->
             <template id="newrow">
                 <div class="row my-3">
                 </div>
             </template>
+
+            <!-- Template for adding a new item -->
             <template id="newitem">
                 <div class="item col col-md-3" onclick="detailPg(this)">
                     <div class="card"> <!-- style="width: 18rem;">-->
@@ -160,6 +144,8 @@
 
 
 
+
+    <!--Footer-->
     <div class="container">
       <footer class="py-3 mt-5">
         <ul class="nav justify-content-center border-bottom mt-3">

@@ -51,6 +51,7 @@ $(function() {
 });
 
 function changeAmt(text){
+
     var sign = $(text).text()[0];
     var key = $(text).text().slice(1,);
     var qtyElement = text.parentElement.getElementsByTagName("span")[2];
@@ -90,10 +91,7 @@ function changeAmt(text){
         }else{
             $("#total-amt").html('$' + (subTotal+15));
         }
-
-    
     });
-    
 }
 
 

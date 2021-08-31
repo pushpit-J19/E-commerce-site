@@ -1,49 +1,18 @@
-// https://www.w3schools.com/tags/tag_template.asp
-// https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_template
-// https://stackoverflow.com/questions/7815374/get-element-inside-element-by-class-and-id-javascript
-
-
+// Adding a new row in the page
 if (document.getElementsByClassName("row").length === 0 ){
   item = document.getElementById("newrow").content.querySelector(".row");
   a = document.importNode(item, true);
   document.getElementById("products").appendChild(a);
 }
 
-
-
-/* // t = shirts.json;
-t=[]
-for (var i=0; i<3; i++){
-  item = document.getElementById("newitem").content.querySelector("div");
-  a = document.importNode(item, true);
-  a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("h5")[0].innerHTML = "yare yare";
-  document.getElementsByClassName("row")[0].appendChild(a);     // change [0] to [-1]
-}
- */
-
-
-
-
-/*   
-  fetch('https://api.coinmarketcap.com/v2/ticker/1312/')
-  .then(shirt => shirts.json())
-  .then((shirt) => {
-    const title = shirt.title ;
-    const description = shirt.description ;
-    const price = shirt.price ;
-    const img = shirt.img ;
-    
-
-  });
- */
-
-
+// CART related activites maintained with an object
 var CART = {};
 if (localStorage.getItem("cart")===""){
   localStorage.setItem('cart', JSON.stringify(CART));
 }
 
 function addToCart(item){
+  // Function to add items to cart from detail page with quantity called by the button
   var CART = localStorage.getItem('cart');
   var qty =parseInt(document.getElementById("qty").value);
   item = item.getElementsByTagName("span")[0].innerHTML;
@@ -66,22 +35,19 @@ function addToCart(item){
 
 }
 
-
 function detailPg(item){
+  // Function called when a customer wants to see details of the item
+  // Redirects to the required page, which is then populated by Javascript
   key = item.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("button")[0].getElementsByTagName("span")[0].innerHTML;
   window.location.href = "detail.html";
   localStorage.setItem("currItem" , key);  
 };
 
 function goToCart(){
+  // function to redirect to the cart page
   window.location.href = "cart.html";
 }
 
-/* window.addEventListener('beforeunload', function (e) {
-  e.preventDefault();
-  localStorage.removeItem("cart");
-});
- */
 
 if(window.location.href !== "detail.html"){
 
@@ -97,7 +63,9 @@ $(function() {
         newitem = document.getElementById("newitem");
         if (newitem!==null){
           newitem = newitem.content.querySelector("div");
-          a = document.importNode(newitem, true);
+          a = document.importNode(newitem, true);     // creating a new node from the template
+
+
           a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("h5")[0].innerHTML = title;
           a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("p")[0].innerHTML = description;
           a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("p")[1].innerHTML = price;
@@ -126,3 +94,29 @@ $(function() {
 });
 
 }
+
+
+// ROUGH
+
+/* // t = shirts.json;
+t=[]
+for (var i=0; i<3; i++){
+  item = document.getElementById("newitem").content.querySelector("div");
+  a = document.importNode(item, true);
+  a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("h5")[0].innerHTML = "yare yare";
+  document.getElementsByClassName("row")[0].appendChild(a);     // change [0] to [-1]
+}
+ */
+
+/*   
+  fetch('https://api.coinmarketcap.com/v2/ticker/1312/')
+  .then(shirt => shirts.json())
+  .then((shirt) => {
+    const title = shirt.title ;
+    const description = shirt.description ;
+    const price = shirt.price ;
+    const img = shirt.img ;
+    
+
+  });
+ */

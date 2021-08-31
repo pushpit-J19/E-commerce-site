@@ -1,13 +1,12 @@
 
+// populates the detail page based on which item was clicked on
+
 key = localStorage.getItem("currItem");
 
 $(function() {
 
     $.getJSON('../shirts.json', function(data) {
-        
-//        newnode = document.getElementById("detail").content.querySelector("div");
-//       a = document.importNode(newnode, true);
-    
+
     a = document.getElementsByClassName("row")[0];
     a.getElementsByClassName("img")[0].src  = data[key].img;
     a.getElementsByClassName("img")[0].alt  = data[key].title;

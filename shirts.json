@@ -3,55 +3,55 @@
         "title": "White Full shirt",
         "price": "$30",
         "description": "Plain white shirt full sleeves",
-        "img" : "images/whitefull.jpg"
+        "img" : "../images/whitefull.jpg"
     },
     "item2":{
         "title": "Black Full shirt",
         "price": "$30",
         "description": "Plain black shirt full sleeves",
-        "img" : "images/blackfull.jpg"
+        "img" : "../images/blackfull.jpg"
     },
     "item3":{
         "title": "White half shirt",
         "price": "$25",
         "description": "Plain white shirt half sleeves",
-        "img" : "images/whitehalf.jpg"
+        "img" : "../images/whitehalf.jpg"
     },
     "item4":{
         "title": "Black half shirt",
         "price": "$25",
         "description": "Plain Black shirt half sleeves",
-        "img" : "images/blackhalf.jpg"
+        "img" : "../images/blackhalf.jpg"
     },
     "item5":{
         "title": "Red Puma t-shirt",
         "price": "$20",
         "description": "Puma Red t-shirt half sleeves",
-        "img" : "images/buy-1.jpg"
+        "img" : "../images/buy-1.jpg"
     },
     "item6":{
         "title": "Blue Puma t-shirt",
         "price": "$20",
         "description": "Puma Blue t-shirt half sleeves",
-        "img" : "images/product-4.jpg"
+        "img" : "../images/product-4.jpg"
     },
     "item7":{
         "title": "Black Puma t-shirt",
         "price": "$30",
         "description": "Half sleeves black Puma t-shirt with stripes ",
-        "img" : "images/product-6.jpg"
+        "img" : "../images/product-6.jpg"
     },
     "item8":{
         "title": "White Adidas Hoodie",
         "price": "$60",
         "description": "Unisex white adidas hoodie",
-        "img" : "images/category-3.jpg"
+        "img" : "../images/category-3.jpg"
     },
     "item9":{
         "title": "Green Cheque shirt",
         "price": "$30",
         "description": "Chequed green shirt full sleeves",
-        "img" : "images/greenchequefull.jpg"
+        "img" : "../images/greenchequefull.jpg"
         
     }
 

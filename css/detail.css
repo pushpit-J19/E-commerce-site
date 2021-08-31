@@ -31,3 +31,8 @@ main{
     width: 25%;
     font-size: large;
 }
+
+.back-to-shop a{
+    color: #6c757d!important;
+    text-decoration: none;
+}

@@ -38,22 +38,32 @@ for (var i=0; i<3; i++){
  */
 
 
-var CART = [];
+var CART = {};
 if (localStorage.getItem("cart")===""){
-  localStorage.setItem("cart", CART);
+  localStorage.setItem('cart', JSON.stringify(CART));
 }
 
 function addToCart(item){
-  var CART = localStorage.getItem("cart");
+  var CART = localStorage.getItem('cart');
+  var qty =parseInt(document.getElementById("qty").value);
+  item = item.getElementsByTagName("span")[0].innerHTML;
   if (CART !== null){
-    CART = CART.split(" ");
+    CART = JSON.parse(CART);
   }else{
-    CART = [];
+    CART = {};
+  }
+  
+  if (item in CART){
+    CART[item] += qty;
+  }else{
+    CART[item] = qty
   }
 
-  CART.push( item.getElementsByTagName("span")[0].innerHTML );
   console.log(CART);
-  localStorage.setItem("cart", CART.join(" "));
+  localStorage.setItem('cart', JSON.stringify(CART));
+
+  alert(qty + " item(s) added to the cart.")
+
 }
 
 
@@ -62,6 +72,10 @@ function detailPg(item){
   window.location.href = "detail.html";
   localStorage.setItem("currItem" , key);  
 };
+
+function goToCart(){
+  window.location.href = "cart.html";
+}
 
 /* window.addEventListener('beforeunload', function (e) {
   e.preventDefault();
@@ -73,7 +87,7 @@ if(window.location.href !== "detail.html"){
 
 $(function() {
 
-  $.getJSON('shirts.json', function(data) {
+  $.getJSON('../shirts.json', function(data) {
       $.each(data, function(key, val) {
         const title = val.title ;
         const description = val.description ;
@@ -90,7 +104,7 @@ $(function() {
           a.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("button")[0].getElementsByTagName("span")[0].innerHTML = key;
           pageimg = a.getElementsByTagName("div")[0].getElementsByTagName("img")[0]
           pageimg.src = img;
-          pageimg.style.width = "18rem";
+          pageimg.style.width = "100%";
           pageimg.style.height = "18rem";
 
           var rows = document.getElementsByClassName("row");

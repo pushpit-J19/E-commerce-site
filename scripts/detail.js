@@ -3,7 +3,7 @@ key = localStorage.getItem("currItem");
 
 $(function() {
 
-    $.getJSON('shirts.json', function(data) {
+    $.getJSON('../shirts.json', function(data) {
         
 //        newnode = document.getElementById("detail").content.querySelector("div");
 //       a = document.importNode(newnode, true);

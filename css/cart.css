@@ -1,0 +1,45 @@
+body {
+    background: #ddd;
+    min-height: 100vh;
+    
+}
+
+.title {
+    margin-bottom: 5vh
+}
+
+.card {
+    margin: auto;
+    max-width: 950px;
+    width: 90%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    border: transparent
+}
+
+@media(max-width:767px) {
+    .card {
+        margin: 3vh auto
+    }
+}
+
+.cart {
+    background-color: #fff;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem
+}
+.card a{
+    color: #6c757d!important;
+    text-decoration: none;
+}
+.qtyIcon{
+    cursor: pointer;
+}
+.delete-container{
+    position: relative;
+}
+.delete{
+    position: absolute;
+    right: 0;
+}

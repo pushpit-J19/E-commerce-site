@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link href="navbar.css" rel="stylesheet">
+    <link href="../css/navbar.css" rel="stylesheet">
     <title>Hello, world!</title>
   </head>
   <body>
@@ -14,13 +14,16 @@
         <nav class="navbar navbar-dark bg-dark pt-2 pb-0">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top rounded-circle">
+                <img src="../images/logo.png" alt="Company Logo" width="30" height="24" class="d-inline-block align-text-top rounded-circle">
                 <span class="p-2">Nile.com</span>
                 </a>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-dark btn-outline-light" type="submit">Search</button>
-              </form>
+                <div class="d-flex">
+                  <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-dark btn-outline-light" type="submit">Search</button>
+                  </form>
+                  <button class="mx-2 btn btn-dark btn-outline-light" type="button" onclick="window.location.href='cart.html'">Go to Cart</button>
+                </div>
             </div>
         <br><br>
         <div class="d-flex flex-row nav nav-tabs text-white mt-1" style="width:100%">
@@ -77,6 +80,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-
+    
   </body>
 </html>

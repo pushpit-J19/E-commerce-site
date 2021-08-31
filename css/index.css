@@ -21,11 +21,11 @@ body{
   width: 25%;
 }
 #carousel-img1{
-  background-image: url(images/offer3.jpg);
+  background-image: url(../images/offer3.jpg);
 }
 #carousel-img2{
-  background-image: url(images/offer2.jpg);
+  background-image: url(../images/offer2.jpg);
 }
 #carousel-img3{
-  background-image: url(images/offer3.jpg);
+  background-image: url(../images/offer3.jpg);
 }

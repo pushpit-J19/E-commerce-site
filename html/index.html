@@ -8,8 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" rel="stylesheet" >
     
-    <link href="index.css" rel="stylesheet">
-    <link href="navbar.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/navbar.css" rel="stylesheet">
 
     <title>Nile</title>
 
@@ -24,14 +24,17 @@
     <header>
         <nav class="navbar navbar-dark bg-dark pt-2 pb-0">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top rounded-circle">
+                <a class="navbar-brand" href="index.html">
+                <img src="../images/logo.png" alt="Company Logo" width="30" height="24" class="d-inline-block align-text-top rounded-circle">
                 <span class="p-2">Nile.com</span>
                 </a>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-dark btn-outline-light" type="submit">Search</button>
-              </form>
+                <div class="d-flex">
+                  <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-dark btn-outline-light" type="submit">Search</button>
+                  </form>
+                  <button class="mx-2 btn btn-dark btn-outline-light" type="button" onclick="window.location.href='cart.html'">Go to Cart</button>
+                </div>
             </div>
         <br><br>
         <div class="d-flex flex-row nav nav-tabs text-white mt-1" style="width:100%">
@@ -152,12 +155,7 @@
 
 
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    -->
+    
   </body>
 </html>
